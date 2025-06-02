@@ -1,135 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Comprende - Lectura 1</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #ff6f00;
-    }
-
-    .pregunta {
-      background: #fff8e1;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-    }
-
-    button {
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .puntaje {
-      text-align: right;
-      font-size: 18px;
-      color: #009688;
-    }
-
-    .audio-control {
-      margin-bottom: 10px;
-      text-align: center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comprende - Lecturas Interactivas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h1>📚 Comprende</h1>
-  <div class="audio-control">
-    <audio id="musica" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" autoplay loop></audio>
-    <button onclick="toggleMusica()">🔊 Pausar/Reanudar Música</button>
-  </div>
-
-  <div class="puntaje">Puntaje: <span id="puntaje">0</span></div>
-
-  <h2>🌟 Lectura 1: El Bosque de los Secretos</h2>
-  <p>
-    En un rincón escondido del mundo, existe un bosque donde los árboles hablan en susurros y las luciérnagas escriben mensajes en el aire.
-    Una niña llamada Lila descubrió este lugar por accidente mientras seguía a un gato de ojos brillantes.
-    Cada noche, el bosque le contaba una historia mágica, y ella debía resolver un acertijo para volver a casa.
-  </p>
-
-  <div class="pregunta">
-    <strong>1. ¿Qué seguía Lila cuando encontró el bosque?</strong><br>
-    <input type="radio" name="p1" value="a"> Un conejo blanco<br>
-    <input type="radio" name="p1" value="b"> Un gato de ojos brillantes<br>
-    <input type="radio" name="p1" value="c"> Un hada del bosque<br>
-  </div>
-
-  <div class="pregunta">
-    <strong>2. ¿Qué hacían las luciérnagas?</strong><br>
-    <input type="radio" name="p2" value="a"> Dormían en flores<br>
-    <input type="radio" name="p2" value="b"> Se escondían bajo tierra<br>
-    <input type="radio" name="p2" value="c"> Escribían mensajes en el aire<br>
-  </div>
-
-  <div class="pregunta">
-    <strong>3. ¿Qué tenía que hacer Lila cada noche?</strong><br>
-    <input type="radio" name="p3" value="a"> Dormir en el bosque<br>
-    <input type="radio" name="p3" value="b"> Resolver un acertijo<br>
-    <input type="radio" name="p3" value="c"> Escalar un árbol mágico<br>
-  </div>
-
-  <button onclick="verificar()">Verificar respuestas</button>
-
-  <!-- Sonidos -->
-  <audio id="correcto" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
-  <audio id="incorrecto" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
-
-  <script>
-    let puntaje = localStorage.getItem('puntaje') || 0;
-    document.getElementById("puntaje").innerText = puntaje;
-
-    function verificar() {
-      const respuestas = {
-        p1: "b",
-        p2: "c",
-        p3: "b"
-      };
-      let puntosGanados = 0;
-      for (let clave in respuestas) {
-        const opciones = document.getElementsByName(clave);
-        for (let op of opciones) {
-          if (op.checked && op.value === respuestas[clave]) {
-            puntosGanados++;
-          }
-        }
-      }
-
-      puntaje = parseInt(puntaje) + puntosGanados;
-      localStorage.setItem('puntaje', puntaje);
-      document.getElementById("puntaje").innerText = puntaje;
-
-      // Reproducir sonido
-      if (puntosGanados === 3) {
-        document.getElementById("correcto").play();
-        alert("¡Perfecto! ¡Muy bien hecho! 🥳");
-      } else {
-        document.getElementById("incorrecto").play();
-        alert(`Obtuviste ${puntosGanados} respuesta(s) correcta(s). ¡Sigue practicando!`);
-      }
-    }
-
-    function toggleMusica() {
-      const musica = document.getElementById("musica");
-      musica.paused ? musica.play() : musica.pause();
-    }
-  </script>
-
+  <h1>Bienvenido a COMPRENDE</h1>
+  <p>Explora nuestras lecturas:</p>
+  <ul>
+    <li><a href="lecturas/raton-valiente.html">El ratón valiente (6-8 años)</a></li>
+    <li><a href="lecturas/amazonas.html">Un viaje por el Amazonas (9-11 años)</a></li>
+  </ul>
 </body>
 </html>

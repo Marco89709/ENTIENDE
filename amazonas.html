@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Un viaje por el Amazonas</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <h2>Un viaje por el Amazonas</h2>
+  <p>El río Amazonas es el más caudaloso del mundo. Atraviesa varios países de América del Sur y está lleno de vida salvaje. En una expedición, Juan y su familia recorrieron parte del río en bote y observaron delfines rosados, monos y muchas aves. Fue una experiencia inolvidable.</p>
+
+  <h3>Preguntas</h3>
+  <form id="quiz2">
+    <p>1. ¿Qué es el Amazonas?</p>
+    <label><input type="radio" name="q1" value="a"> Una montaña</label><br/>
+    <label><input type="radio" name="q1" value="b"> Un río</label><br/>
+    <label><input type="radio" name="q1" value="c"> Una ciudad</label><br/>
+
+    <p>2. ¿Qué animales vieron?</p>
+    <label><input type="radio" name="q2" value="a"> Delfines, monos y aves</label><br/>
+    <label><input type="radio" name="q2" value="b"> Tigres y elefantes</label><br/>
+    <label><input type="radio" name="q2" value="c"> Gatos y perros</label><br/>
+
+    <p>3. ¿Quién fue al viaje?</p>
+    <label><input type="radio" name="q3" value="a"> Juan y su familia</label><br/>
+    <label><input type="radio" name="q3" value="b"> Solo Juan</label><br/>
+    <label><input type="radio" name="q3" value="c"> Los amigos de Juan</label><br/>
+
+    <button type="button" onclick="checkAnswers()">Verificar</button>
+    <p id="result"></p>
+  </form>
+  <script src="../script.js"></script>
+</body>
+</html>

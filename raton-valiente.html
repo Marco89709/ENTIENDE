@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El ratón valiente</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <h2>El ratón valiente</h2>
+  <p>Había una vez un ratón muy pequeño que vivía en el bosque. Aunque era pequeño, no le tenía miedo a nada. Un día, se encontró con un zorro hambriento. El ratón, sin temblar, le dijo: "Si me comes, perderás a un gran amigo". El zorro, sorprendido, lo dejó ir. Desde ese día, fueron amigos.</p>
+
+  <h3>Preguntas</h3>
+  <form id="quiz1">
+    <p>1. ¿Dónde vivía el ratón?</p>
+    <label><input type="radio" name="q1" value="a"> En una ciudad</label><br/>
+    <label><input type="radio" name="q1" value="b"> En una casa</label><br/>
+    <label><input type="radio" name="q1" value="c"> En el bosque</label><br/>
+
+    <p>2. ¿A quién se encontró el ratón?</p>
+    <label><input type="radio" name="q2" value="a"> Un gato</label><br/>
+    <label><input type="radio" name="q2" value="b"> Un zorro</label><br/>
+    <label><input type="radio" name="q2" value="c"> Un perro</label><br/>
+
+    <p>3. ¿Qué hizo el zorro al final?</p>
+    <label><input type="radio" name="q3" value="a"> Se fue</label><br/>
+    <label><input type="radio" name="q3" value="b"> Se lo comió</label><br/>
+    <label><input type="radio" name="q3" value="c"> Se hizo su amigo</label><br/>
+
+    <button type="button" onclick="checkAnswers()">Verificar</button>
+    <p id="result"></p>
+  </form>
+  <script src="../script.js"></script>
+</body>
+</html>
